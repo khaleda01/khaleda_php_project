@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sales Order Form</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>Sales Order Form</h1>
+
+  <form id="salesOrderForm" action="submit.php" method="POST">
+    <fieldset>
+      <legend>Customer Details</legend>
+      <label for="customerName">Customer Name:</label>
+      <input type="text" id="customerName" name="customerName" required><br>
+
+      <label for="customerEmail">Customer Email:</label>
+      <input type="email" id="customerEmail" name="customerEmail" required><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Sales Order Products</legend>
+      <div id="productsContainer">
+        <div class="productEntry">
+          <label for="product1">Product:</label>
+          <input type="text" id="product1" name="product[]" required>
+
+          <label for="quantity1">Quantity:</label>
+          <input type="number" id="quantity1" name="quantity[]" required>
+
+          <button type="button" onclick="removeProductEntry(this)">Remove</button>
+        </div>
+      </div>
+
+      <button type="button" onclick="addProductEntry()">Add Product</button>
+    </fieldset>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

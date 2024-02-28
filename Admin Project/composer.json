@@ -1,0 +1,18 @@
+{
+    "name": "skmiraj/storemanagementproject",
+    "description": "This is store management web application",
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.29"
+    },
+    "autoload": {
+        "psr-4": {
+            "Skmiraj\\Storemanagementproject\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "skmirajbn",
+            "email": "skmirajbn@gmail.com"
+        }
+    ]
+}
